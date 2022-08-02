@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title>[Flutter] loop & list [ ] , map, where, reduce, every, any, for in | Techdesignism</title>
+
+  <meta property="og:image"
+    content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmyz7HMm5hq5aDJynK7apKu2Sd2uPLA_FyuS-kB6D5_x161uSnczi4dDuNMYuuTHkZrmsunY1KaEBA12Ym-hGv3CtMoRF22meiPIcv23AFTuL1T0uuxFVlpxZiyx1GKhw0YH-0zv7JcIKBFsLpN5OVSy4WLS8zk7f1HTxvZxkyXY8QD5wC0WQaNv2o7Q/s1200/flutterloopmap.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "provider": {
+          "@type": "Organization",
+          "name": "Techdesignism",
+          "sameAs": "http://www.techdesignism.com/",
+          "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "1390"
+          }
+      }
+  }
+  </script>
+
+</head>
+
+<body>
+
+  Create a list with a loop in 1 line You can put a for loop in [ ] to create a list. List myList = [for(int i=0;i Map
+  In many programming languages, a map is the name of a higher-order function that applies a given function to each
+  element of a collection, e.g. a list or set, returning the results in a collection of the same type. It is often
+  called apply-to-all when considered in functional form. List myList = [1,2,3,4,5]; List myList2 = myList.map((item){
+  return item item; }).toList(); print(myList2); // [1, 4, 9, 16, 25] Where Returns a new lazy Iterable with all
+  elements that satisfy the condition (predicate test). The matching elements have the same order in the returned
+  iterable as in iterator. List myList = ['apple','banana','cat','dog','egg','face','good']; var result =
+  myList.where((item){ return item.contains('o'); }); print(result.toList()); //[dog, good] Reduce Reduces a
+  collection to a single value by iteratively combining elements of the collection using the provided function. The
+  iterable must have at least one element. If it has only one element, that element is returned. Otherwise, this
+  method starts with the first element from the iterator and then combines it with the remaining elements in iteration
+  order. 1. accumulate List myList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; int result = myList.reduce((accumulator,
+  currentElement){ return accumulator + currentElement; }); print(result); // 55 1. find max List myList =
+  [2,9,4,6,1,3,9,4,0,2]; int result = myList.reduce((max, currentElement){ return
+  currentElement>max?currentElement:max; }); print(result); // 9 Every Checks whether every element of this iterable
+  satisfies the test. Checks every element in iteration order, and returns false if any of them make test return
+  false, otherwise returns true. + every item List myList = [3,2,1,3,2,3]; bool result = myList.every((item){ return
+  item &lt; 5; }); print(result); //true Any Checks whether any element of this iterable satisfies the test. Checks
+  every element in iteration order, and returns true if any of them make test return true, otherwise returns false. +
+  Is any number less than zero? List myList = [-1, 0, 1, 2, 3, 4, 5]; bool result = myList.any((item){ return item
+  &lt; 0; }); print(result); // true for…in In Dart, the for...in loop takes an expression as an iterator and iterates
+  through the elements one at a time in sequence. List myList = [1, 2, 3, 4, 5]; for(int i in myList){ print(i); //1 2
+  3 4 5 }
+</body>
+
+</html>
