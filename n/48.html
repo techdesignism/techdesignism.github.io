@@ -1,0 +1,17 @@
+
+<script>
+window.location.href = "https://techdesignism.com/?n=48";
+</script>
+<html>
+<head>
+<title>Flutter Tutorial for Beginners Day 5 - Scaffold & AppBar Widgets | Techdesignism</title>
+
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8a-qvp9QQKnzRO8u1Pc6QOCfg1h3nQ7fga73_Xq8kTGipWij3RIHp4wuVKBMqH3cR3Ugk33hOto_TqS_HD8CEu173QP70N4KvMnrhS-T7uj0HIPBWMG4_N6DNeHVdpt2AiR6ELy5YmKDnOSTw9kMZyvEBPAMyV3sa76xKL3n_clO1KbkHQMyo0ZmhLA/s1200/dfg5j4f253g4j.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+</head>
+<body>
+This tutorial is using Flutter 3.0.5 Simplify the demo app First, simplify the demo app like the one below. import 'package:flutter/material.dart'; void main() { runApp(const MyApp()); } class MyApp extends StatelessWidget { const MyApp({Key? key}) : super(key: key); @override Widget build(BuildContext context) { return MaterialApp( theme: ThemeData( primarySwatch: Colors.green, ), home: Scaffold( appBar: AppBar( title: Text('App Bar Title'), ), body: Center( child: Text('Content'), ), floatingActionButton: FloatingActionButton( onPressed: (){}, child: const Icon(Icons.add), ), ) ); } } We can see there are 3 properties of Scaffold: appBar, body, and floatingActionButton. We can use appBar to control the top bar. body is the content below the top bar. floatingActionButton is the right bottom corner circle button. Structure of the app MyApp MaterialApp Scaffold AppBar Center Text FloatingActionButton
+</body>
+</html>
