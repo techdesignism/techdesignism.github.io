@@ -1,7 +1,4 @@
 
-<script>
-window.location.href = "https://techdesignism.com/?n=12";
-</script>
 <html>
 <head>
 <title>(Mac) Install PHP, composer, laravel | Techdesignism</title>
@@ -12,6 +9,9 @@ window.location.href = "https://techdesignism.com/?n=12";
 
 </head>
 <body>
+<script>
+window.location.href = "https://techdesignism.com/?n=12";
+</script>
 This tutorial is tested in Mac Intel Environment. How to Install PHP When it comes to installing software on your Mac, we need only one package manager, and it's Homebrew. It can install any package or software you want and even install specific versions. Homebrew: [https://brew.sh/](https://brew.sh/ "new tab") Installing PHP with Homebrew on Mac brew install php This will install the latest stable version of PHP (At the moment of writing, this is PHP 8.0). Before running any brew commands, it's a good habit to run the following commands first. These will check if Homebrew is all up to date and running the latest versions. brew update brew doctor Installing PHP 7.4 with Homebrew In my case, I wanted to install PHP 7.4 since it's the version our server is running. To install a specific version, we can use the @ notation. brew install php@7.4 This will run the installer, and it should end with a success notice in your terminal. However, even though this installed PHP, it didn't change our running instance yet. So if we run the php -v command, we might still see a different version like PHP 7.3.14 (CLI) or whatever you have installed. To fix this, we need to link the correct PHP version. Switching PHP Versions with Homebrew on Mac php -v Then we can unlink that version by using (if your PHP version is 8.0): brew unlink php@8.0 The next step is to link the version we want: brew link php@7.4 if you run php -v again it should show the version you have chosen. --- How to Install composer Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. Download composer: [https://getcomposer.org/download/](https://getcomposer.org/download/ "new tab") --- Create a Laravel project find a place/path, and use the terminal to cd to it. cd ~/Documents/ Create a project (myapp is the project name, and 8.1.0 is the laravel version.) composer create-project laravel/laravel=8.1.0 myapp alert-danger a { color: rgb(41, 145, 210)!important; } The Laravel version must be selected corresponding to the PHP version, for example, Laravel 8 must correspond to PHP ≥ 7.3 and ≤ 8.1. For details, please refer to [https://en.wikipedia.org/wiki/LaravelRelease_history](https://en.wikipedia.org/wiki/LaravelRelease_history "new tab") or [https://laravel.com/docs/9.x/releasessupport-policy](https://laravel.com/docs/9.x/releasessupport-policy "new tab") cd to your project cd myapp Serve it (turn on the server) php artisan serve
 </body>
 </html>
