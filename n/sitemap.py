@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[29]:
+# In[1]:
 
 
 import requests
@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 r = requests.get('https://techdesignism.com/sitemap')
 
 
-# In[30]:
+# In[2]:
 
 
 for x in r.text.split('\n'):
@@ -28,9 +28,6 @@ for x in r.text.split('\n'):
                     image = (y.attrs['content'])
         outhtml = (
 f"""
-<script>
-window.location.href = "{x}";
-</script>
 <html>
 <head>
 <title>{title}</title>
@@ -41,6 +38,9 @@ window.location.href = "{x}";
 
 </head>
 <body>
+<script>
+window.location.href = "{x}";
+</script>
 {description}
 </body>
 </html>
@@ -49,7 +49,7 @@ window.location.href = "{x}";
             f.write(outhtml)
 
 
-# In[31]:
+# In[3]:
 
 
 sitemaptxt = ''
@@ -59,7 +59,7 @@ for x in r.text.split('\n'):
         sitemaptxt += (f"https://techdesignism.github.io/n/{id}.html\n")
 
 
-# In[32]:
+# In[4]:
 
 
 with open('sitemap.txt', 'w') as f:
