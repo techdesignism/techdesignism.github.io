@@ -1,0 +1,17 @@
+
+<html>
+<head>
+<title>Flutter Tutorial for Beginners Day 7 - Images & Assets | Techdesignism</title>
+
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD2mRGZx2I3V78JWMzw-MsnCZOc-Ey-MDM4L6i6ZkgRBpIoTtj9yueVtMoPxck5CFTj6_iTn8vGRQ-xR_QSUK2NeW3Zm4FYc764MjuP9IBuSYgXkL8bc9Iy7s226NDNZqe1NByo-JOIu2Mno75I6WQqaN6cLTAQwt9yGdaLATnQF-XsqAMfynHz1xPGQ/s1200/Custom%20Size%20%E2%80%93%201.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+</head>
+<body>
+<script>
+window.location.href = "https://techdesignism.com/?n=50";
+</script>
+This tutorial is using Flutter 3.0.5 Flutter apps can include both code and assets (sometimes called resources). An asset is a file that is bundled and deployed with your app, and is accessible at runtime. Common types of assets include static data (for example, JSON files), configuration files, icons, and images (JPEG, WebP, GIF, animated WebP/GIF, PNG, BMP, and WBMP). Set up assets Folder Create a new folder in your project called "assets". Add File Drag and drop the file to your "assets" folder. You can download the file "flutter.png" here: Set up pubspec.yaml Open the file "pubspec.yaml" Find the position for adding assets like below. Uncomment and change the assets path. assets: - assets/ Add a image widget to main.dart Add Image.asset('assets/flutter.png') into main.dart as the child of Center Widget like below: import 'package:flutter/material.dart'; void main() { runApp(const MyApp()); } class MyApp extends StatelessWidget { const MyApp({Key? key}) : super(key: key); @override Widget build(BuildContext context) { return MaterialApp( theme: ThemeData( primarySwatch: Colors.green, ), home: Scaffold( appBar: AppBar( title: Text('App Bar Title'), ), body: Center( child: Image.asset('assets/flutter.png'), ), floatingActionButton: FloatingActionButton( onPressed: (){}, child: const Icon(Icons.add), ), ) ); } } You can use a network image. Just change Image.asset('assets/flutter.png') to Image.network('https://techdesignism.com/tdnotes/png/onerror.png')
+</body>
+</html>
