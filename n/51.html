@@ -1,0 +1,17 @@
+
+<html>
+<head>
+<title>Flutter Tutorial for Beginners Day 8 - Buttons & Icons | Techdesignism</title>
+
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhNq5yE1Kwudg9zTyjI59q_ZInt2FX4EZIBDh3o0wt7wcSpoVJ4HuHFU3vf3z1nYIL8TaId4AngGnxkcjhBWWfZsH-htCC7uiwSBNAr2-pmlR4PhR3b01xDOOEpvOADYEU1xnspoqkAwnGC_OEgMeOrk6eqhHbptBGEbcWHpXXzw2lk57yL50KJofh8Vw/s1200/Custom%20Size%20%E2%80%93%201.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+</head>
+<body>
+<script>
+window.location.href = "https://techdesignism.com/?n=51";
+</script>
+This tutorial is using Flutter 3.0.5 ElevatedButton You can change the code to be like the below. import 'package:flutter/material.dart'; void main() { runApp(const MyApp()); } class MyApp extends StatelessWidget { const MyApp({Key? key}) : super(key: key); @override Widget build(BuildContext context) { return MaterialApp( theme: ThemeData( primarySwatch: Colors.green, ), home: Scaffold( appBar: AppBar( title: Text('App Bar Title'), ), body: Center( child: ElevatedButton( child: Text("I'm a button"), onPressed: (){ print('hello'); }, ), ), ) ); } } You can change Text("I'm a button") to change the text of the button. onPressed: (){ } controls the actions after pressing the button. If you press the button, you can see the log "hello" in the console. I/flutter (15703): hello I/flutter (15703): hello I/flutter (15703): hello ElevatedButton.icon Change the code to be like the below. We changed ElevatedButton to ElevatedButton.icon and set up corresponding properties. import 'package:flutter/material.dart'; void main() { runApp(const MyApp()); } class MyApp extends StatelessWidget { const MyApp({Key? key}) : super(key: key); @override Widget build(BuildContext context) { return MaterialApp( theme: ThemeData( primarySwatch: Colors.green, ), home: Scaffold( appBar: AppBar( title: Text('App Bar Title'), ), body: Center( child: ElevatedButton.icon( icon: Icon(Icons.star), label: Text("I'm a button"), onPressed: (){ print('hello'); }, ), ), ) ); } } You can choose a different icon from [https://api.flutter.dev/flutter/material/Icons-class.htmlstar](https://api.flutter.dev/flutter/material/Icons-class.htmlstar "new tab")
+</body>
+</html>
